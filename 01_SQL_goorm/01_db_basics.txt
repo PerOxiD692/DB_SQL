@@ -1,4 +1,4 @@
-// Datenbanken anzeigen
+ // Datenbanken anzeigen
 SHOW DATABASES;
 
 // Datenbank anlegen
