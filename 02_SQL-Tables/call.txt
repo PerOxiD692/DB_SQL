@@ -2,3 +2,4 @@
 02: 	source 02_SQL-Tables/02_db_table_sql.sql
 02a: 	source 02_SQL-Tables/02a_db_table_sql.sql
 02b: 	source 02_SQL-Tables/02b_db_table_sql.sql
+02c: 	source 02_SQL-Tables/02c_db_table_sql.sql
