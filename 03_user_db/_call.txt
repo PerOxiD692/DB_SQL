@@ -1,0 +1,11 @@
+/* ----- call -----*/
+source 03_user_db/03_user_db_sql.sql DB_SQL/03_user_db/03_user_db_sql.sql
+
+
+/* ----- CLI - Command Line Interface ----- */
+mysql-ctl cli;
+/* ----- MySQL DB-Start ----- */
+mysql-ctl start;
+/* ----- MySQL DB-Stop ----- */
+mysql-ctl stop;
+
