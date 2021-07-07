@@ -18,11 +18,10 @@ CREATE TABLE IF NOT EXISTS user_table
 DESCRIBE user_table;
 
 /* ----- DATEN ----- */
-INSERT INTO user_table (user_name, user_pwd, first_name, family_name) VALUES ("Max", "1234", "Max", "Mütze");
-INSERT INTO user_table (user_name, user_pwd, first_name, family_name) VALUES ("Maxine", "#D7x0", "Maxine", "Mütze");
-
-# gleicher user_name wird zugelassen!
-INSERT INTO user_table (user_name, user_pwd, first_name, family_name) VALUES ("Max2", "user1234", "Max","Mützerich");
+# Nachteil: Passwort wird durch sha1 verschlüssellt!
+INSERT INTO user_table (user_name, user_pwd, first_name, family_name) VALUES ("Max", sha1("1234"), "Max", "Mütze");
+INSERT INTO user_table (user_name, user_pwd, first_name, family_name) VALUES ("Maxine", sha1("#D7x0"), "Maxine", "Mütze");
+INSERT INTO user_table (user_name, user_pwd, first_name, family_name) VALUES ("Max2", sha1("user1234"), "Max","Mützerich");
 
 /* ----- Gesamte Tabelle ausgeben ----- */
 SELECT * FROM user_table;
