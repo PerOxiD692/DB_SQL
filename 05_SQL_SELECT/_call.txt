@@ -1,0 +1,12 @@
+/* ----- call -----*/
+source 05_SQL_SELECT/05_1_parsing_csv.sql
+
+
+
+/* ----- CLI - Command Line Interface ----- */
+mysql-ctl cli;
+/* ----- MySQL DB-Start ----- */
+mysql-ctl start;
+/* ----- MySQL DB-Stop ----- */
+mysql-ctl stop;
+
