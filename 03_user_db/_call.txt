@@ -1,6 +1,7 @@
 /* ----- call -----*/
 source 03_user_db/03_user_db_sql.sql
 source 03_user_db/03a_user_db_sql.sql
+source 03_user_db/03b_user_db_sql.sql
 
 
 /* ----- CLI - Command Line Interface ----- */
