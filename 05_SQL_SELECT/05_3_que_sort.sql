@@ -1,4 +1,5 @@
-/* ----- QUERIES Sort----- */
+
+ /* ----- QUERIES Sort----- */
 USE user_db;
 
 /* Sortieren nach Sektor / Aufsteigend (alphabetisch) */
@@ -26,7 +27,4 @@ FROM ccc_list
 #ORDER BY price DESC   #beginnend mit der teuersten Aktie
 ORDER BY no_yrs DESC, sector ASC
 LIMIT 20;
-
-    
-    
-    
+   
