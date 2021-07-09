@@ -36,7 +36,9 @@ SELECT
     sector AS "Industiesektoren",                        #NICHT aggregiert --> organisch (bereits in der der Tabelle vorhanden)
     COUNT(DISTINCT industry) AS "Branchen"               #Aggregiert --> durch Funktion entstanden
 FROM ccc_list
+# WHERE sector LIKE "Consumer%"                            #Filter in NICHT aggr. Feldern
 GROUP BY sector                                          #Bei Kombination von Aggregierten und nicht Aggregierten Tabellen notwendig
+HAVING Branchen >10                                      #Mehr als 10 Branchen pro Sektor
 ORDER BY Branchen DESC;               
 
 
