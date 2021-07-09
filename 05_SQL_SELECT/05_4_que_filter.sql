@@ -6,7 +6,7 @@ USE user_db;
     Eigrenzen/Filtern mit WHERE & AND/OR etc.
     Eigrenzen/Filtern mit WHERE & LIKE + Parameter
     Eigrenzen/Filtern mit WHERE & REgEx
-    Eigrenzen/Filtern mit WHERE & 
+    Eigrenzen/Filtern mit WHERE & IN / NOT IN
     Eigrenzen/Filtern mit WHERE & 
 */
 
@@ -88,3 +88,5 @@ FROM ccc_list
 WHERE sector = "Financials" AND industry NOT IN ("Banks","Insurance")
 ORDER BY industry DESC;
 */
+
+
