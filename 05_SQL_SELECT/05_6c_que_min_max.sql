@@ -1,17 +1,16 @@
 /* Aggregationen MIN/MAX */
-
-USE boo;
+USE user_db;
 
 -- Preis der teuersten/günstigsten Aktie?
 /*
 SELECT
-	max(price) AS "Max. Preis"
-    #min(price) AS "Min. PREIS"
-FROM boo.ccc_list
-;*/
+	# MAX(price) AS "Max. Preis"
+    MIN(price) AS "Min. PREIS"
+FROM user_db.ccc_list;
+*/
 
-# SELECT max(price) FROM boo.ccc_list;
-# SELECT min(price) FROM boo.ccc_list;
+# SELECT max(price) FROM user_db.ccc_list;
+# SELECT min(price) FROM user_db.ccc_list;
 
 -- WELCHE Aktie ist am teuersten/günstigsten ?
 -- 1. Subquery
@@ -22,17 +21,19 @@ SELECT
 	ticker SYM,
     c_name Unternehmen,
     price Aktienkurs
-FROM boo.ccc_list
-WHERE price = (SELECT max(price) FROM boo.ccc_list)  # Subquery / Klammern!
-#WHERE price = (SELECT min(price) FROM boo.ccc_list) 
+FROM user_db.ccc_list
+WHERE price = (SELECT max(price) FROM user_db.ccc_list)  # Subquery / Klammern!
+#WHERE price = (SELECT min(price) FROM user_db.ccc_list) 
 ;*/
+
 
 /*
 SELECT
 	ticker SYM,
     c_name Unternehmen,
     price Aktienkurs
-FROM boo.ccc_list
+FROM user_db.ccc_list
 #ORDER BY price ASC
 ORDER BY price DESC
-LIMIT 1;*/
+LIMIT 1;
+*/
