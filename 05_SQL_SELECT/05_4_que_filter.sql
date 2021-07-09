@@ -10,7 +10,6 @@ USE user_db;
     Eigrenzen/Filtern mit WHERE & 
 */
 
-
 /* ----- Eigrenzen/Filtern mit WHERE & AND/OR etc. ----- */
 /*
 SELECT 
@@ -32,7 +31,6 @@ ORDER BY price ASC    #beginnend mit der günstigster Aktie
 LIMIT 20;
 */
 
-
 /* Eingrenzen / Filtern mit WHERE & LIKE + Parameter */
 /*
 SELECT 
@@ -45,7 +43,6 @@ FROM ccc_list
 # WHERE industry LIKE "%ment"    #unscharfte Suche - Endet mit "ment"
 # WHERE industry LIKE "%ood%"    #unscharfe Suche - Alles was "ood" beinhaltet  
 */
-
 
 /* Branchenname endet/beginnt mit ... , danach/davor/inmitten genau _ Char */
 /*
@@ -69,8 +66,17 @@ ORDER BY industry ASC
 LIMIT 40;
 */
 
+/* Eingrenzen/Filtern WHERE & RegEx */
+/*
+SELECT
+	c_name "Unternehmen"
+FROM ccc_list
+WHERE c_name RLIKE "^[AZ]"
+ORDER BY c_name;
+*/
 
 /* Eingrenzen/Filtern WHERE & IN / NOT IN */
+/*
 SELECT 
 	ticker "SYM",
 	c_name "Unternehmen",
@@ -81,4 +87,4 @@ FROM ccc_list
 #WHERE industry IN ("Beverages","Banks") #OR ...
 WHERE sector = "Financials" AND industry NOT IN ("Banks","Insurance")
 ORDER BY industry DESC;
-
+*/
